@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Create Quiz Manually{% endblock %}
+{% block content %}
+  <h2>Create Quiz Manually</h2>
+  <p>
+      Here you can create a quiz by specifying the Subject ID and the exact Question IDs
+      you want to include. You might need to view the available questions first
+      (from the dashboard or another feature) to get the IDs.
+  </p>
+
+  <form method="post" action="{{ url_for('create_quiz_manual') }}">
+    <label for="subject_id">Subject ID:</label>
+    <input type="text" id="subject_id" name="subject_id" required
+           placeholder="e.g., CS101">
+
+    <label for="quiz_title">Quiz Title:</label>
+    <input type="text" id="quiz_title" name="quiz_title" required
+           placeholder="e.g., Chapter 1 Test">
+
+    <label for="question_ids">Question IDs (comma-separated):</label>
+    <textarea id="question_ids" name="question_ids" rows="4" required
+              placeholder="e.g., q_uuid1, q_uuid5, q_uuid10"></textarea>
+    <small>Find Question IDs by viewing subjects/questions if needed.</small>
+
+    <br><br>
+    <button type="submit">Create Manual Quiz</button>
+  </form>
+
+  <p><a href="{{ url_for('teacher_dashboard') }}">Back to Dashboard</a></p>
+{% endblock %}

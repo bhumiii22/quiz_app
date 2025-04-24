@@ -1,0 +1,28 @@
+[
+    {
+        "user_id": "user_bc3e74fa-e0b9-4b39-aad5-5856e3ab52c5",
+        "email": "bhumikajit123@gst.sies.edu.in",
+        "password_hash": "scrypt:32768:8:1$tPT6IyhDnQr56jjZ$a8091735892092d8e635ab318fe92b688ca9700e2e8c2033aa3a624c8e3983bbefda0f4e1510abdb4d6e35b3445004b2aa3c3029f29e6a6ab7eb7dd9c3d83e5d",
+        "role": "student",
+        "prn": "123A3010"
+    },
+    {
+        "user_id": "user_688afe2e-528d-4810-abfc-07c580375da5",
+        "email": "user1@sies.edu.in",
+        "password_hash": "scrypt:32768:8:1$WMy6qdjLei91VNkQ$51aebe1580e4412090bcb2ef91e731de2dbdcb653b407214cf6c06267cb099fabc5591e96ff639210e7eff445a9eeb74d3a989747b4e1c765bad6b8344258a1e",
+        "role": "teacher"
+    },
+    {
+        "user_id": "user_94239951-90c5-43a9-a0ba-426820068083",
+        "email": "teacher@sies.edu.in",
+        "password_hash": "scrypt:32768:8:1$YLEvS0ArxnJI6bwu$64372789fbc5c1ccb4c4c4561a395d2d428961ac8a1252a1e177f7ac6c96c5201d160b63d23144f217903e5b34635fdd1d1adb7cb75e7ce521a423130090e342",
+        "role": "teacher"
+    },
+    {
+        "user_id": "user_3349a026-3049-4a4c-bb54-6fe9d76e4d5f",
+        "email": "damayanti@gst.sies.edu.in",
+        "password_hash": "scrypt:32768:8:1$4yVb17n3hLLGF59i$f7c71230d0c82260be32de30bf1774587745e3589d6650c21a24dc525b715754ba2d0ef5037b069e3a6d93d962068fd9b71498bae5c80ff9328f889cfeac6cbc",
+        "role": "student",
+        "prn": "123A3015"
+    }
+]

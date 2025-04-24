@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Take Quiz: {{ quiz_details.title }}{% endblock %}
+{% block content %}
+  <h2>{{ quiz_details.title }} (Subject: {{ quiz_details.subject_id }})</h2>
+  <p>Question {{ current_q_index + 1 }} of {{ total_questions }}</p>
+
+  {% if current_question %}
+  <form method="post" action="{{ url_for('take_quiz', quiz_id=quiz_details.quiz_id) }}">
+    <div class="quiz-question">
+        <p><strong>({{ current_question.marks }} marks) {{ current_question.text }}</strong></p>
+        <div class="quiz-options">
+            {% for option in current_question.options %} {# Ensure options are shuffled in app.py #}
+            <label>
+                <input type="radio" name="answer" value="{{ option }}" required> {{ option }}
+            </label>
+            {% endfor %}
+        </div>
+    </div>
+    <button type="submit">Next Question</button>
+  </form>
+  {% else %}
+     <p>Error loading question.</p> {# Should not happen if logic is correct #}
+  {% endif %}
+
+  <hr>
+  <p><a href="{{ url_for('student_dashboard') }}">Quit Quiz (Progress will be lost)</a></p> {# Simple quit option #}
+
+{% endblock %}

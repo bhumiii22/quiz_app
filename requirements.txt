@@ -1,0 +1,6 @@
+pandas
+openpyxl
+matplotlib
+werkzeug
+filelock
+Flask

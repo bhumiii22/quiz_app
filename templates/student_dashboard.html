@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block title %}Student Dashboard{% endblock %}
+{% block content %}
+  <h2>Welcome, Student {{ session.user_email }} (PRN: {{ session.user_prn }})</h2>
+
+  <h3>Available Quizzes</h3>
+  {% if available_quizzes %}
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Subject</th>
+          <th>Total Marks</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for quiz in available_quizzes %}
+        <tr>
+          <td>{{ quiz.title }}</td>
+          <td>{{ quiz.subject_id }}</td>
+          <td>{{ quiz.total_marks }}</td>
+          <td><a href="{{ url_for('take_quiz', quiz_id=quiz.quiz_id) }}">Take Quiz</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No available quizzes right now.</p>
+  {% endif %}
+
+  <hr>
+
+  <h3>Completed Quizzes</h3>
+  {% if completed_quizzes %}
+     <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Subject</th>
+          <th>Your Score</th>
+          <th>Total Marks</th>
+          <th>Completed On</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for result in completed_quizzes %}
+        <tr>
+          <td>{{ result.quiz_title }}</td>
+          <td>{{ result.subject_id }}</td>
+          <td>{{ result.score }}</td>
+          <td>{{ result.total_marks }}</td>
+          <td>{{ result.timestamp | format_datetime }}</td> {# Requires filter - see app.py #}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>You haven't completed any quizzes yet.</p>
+  {% endif %}
+
+{% endblock %}

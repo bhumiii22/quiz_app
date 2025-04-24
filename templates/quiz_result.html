@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}Quiz Result{% endblock %}
+{% block content %}
+  <h2>Quiz Completed: {{ quiz_title }}</h2>
+  <p>Subject: {{ subject_id }}</p>
+  <h3>Your Score: {{ score }} / {{ total_marks }}</h3>
+  <p><strong>Feedback: {{ feedback }}</strong></p>
+
+  <hr>
+   {# Optionally display submitted answers vs correct answers here if needed #}
+   {# This requires passing more data from app.py and modifying the result saving #}
+
+  <p><a href="{{ url_for('student_dashboard') }}">Back to Dashboard</a></p>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Create Quiz from Excel{% endblock %}
+{% block content %}
+  <h2>Create Quiz from Excel</h2>
+  <p>
+      Upload an Excel (.xlsx) file with questions. Ensure it has the required columns:
+      <code>Question Text, Option A, Option B, Option C, Option D, Correct Option Letter, Marks</code>.
+  </p>
+
+  <form method="post" enctype="multipart/form-data" action="{{ url_for('create_quiz_excel') }}">
+    <label for="subject_id">Subject ID for these questions:</label>
+    <input type="text" id="subject_id" name="subject_id" required
+           placeholder="e.g., PHY102">
+
+    <label for="excel_file">Select Excel File (.xlsx):</label>
+    <input type="file" id="excel_file" name="excel_file" accept=".xlsx" required>
+
+    <label for="create_quiz_now">
+        <input type="checkbox" id="create_quiz_now" name="create_quiz_now" value="yes">
+        Automatically create a quiz using ALL successfully added questions from this file?
+    </label>
+
+    <label for="quiz_title">Quiz Title (if creating automatically):</label>
+    <input type="text" id="quiz_title" name="quiz_title"
+           placeholder="Optional, default will be generated">
+
+    <br><br>
+    <button type="submit">Upload and Process</button>
+  </form>
+
+  <p><a href="{{ url_for('teacher_dashboard') }}">Back to Dashboard</a></p>
+{% endblock %}

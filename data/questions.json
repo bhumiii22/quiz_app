@@ -1,0 +1,246 @@
+{
+    "OS": [
+        {
+            "q_id": "q_e946102b-d065-48ae-92a4-ceab664da91c",
+            "text": "What is the primary function of an Operating System?",
+            "options": [
+                "Manage computer hardware",
+                "Provide a user interface",
+                "Execute application programs",
+                "All of the above"
+            ],
+            "correct_answer": "All of the above",
+            "marks": 1
+        },
+        {
+            "q_id": "q_4c36595a-0d81-47ef-9afb-27b60db7ca78",
+            "text": "Which scheduling algorithm aims to minimize the average waiting time?",
+            "options": [
+                "First-Come, First-Served (FCFS)",
+                "Shortest Job First (SJF)",
+                "Round Robin (RR)",
+                "Priority Scheduling"
+            ],
+            "correct_answer": "Shortest Job First (SJF)",
+            "marks": 2
+        },
+        {
+            "q_id": "q_cd9c0863-74e5-4c0b-b3c8-d7389352b905",
+            "text": "A process currently waiting for the CPU to become available is in which state?",
+            "options": [
+                "Running",
+                "Waiting",
+                "Ready",
+                "Terminated"
+            ],
+            "correct_answer": "Ready",
+            "marks": 1
+        },
+        {
+            "q_id": "q_b9568a95-c37f-4c2e-bcbb-0407d3ef9b39",
+            "text": "The mechanism where the OS uses secondary storage to extend the available RAM is called:",
+            "options": [
+                "Caching",
+                "Spooling",
+                "Virtual Memory",
+                "Buffering"
+            ],
+            "correct_answer": "Virtual Memory",
+            "marks": 1
+        },
+        {
+            "q_id": "q_7714fd0e-81bf-4c0c-9b8f-ef28b2e1f734",
+            "text": "A situation where two or more processes are waiting indefinitely for an event that can only be caused by one of the waiting processes is called:",
+            "options": [
+                "Starvation",
+                "Deadlock",
+                "Race Condition",
+                "Critical Section"
+            ],
+            "correct_answer": "Deadlock",
+            "marks": 2
+        },
+        {
+            "q_id": "q_7194de29-bed2-43f7-b8e8-62c957d7ad9f",
+            "text": "What is \"Thrashing\" in the context of memory management?",
+            "options": [
+                "Excessive page swapping",
+                "Memory leak",
+                "Buffer overflow",
+                "Disk fragmentation"
+            ],
+            "correct_answer": "Excessive page swapping",
+            "marks": 1
+        },
+        {
+            "q_id": "q_33cb7547-2957-41e3-a069-b43b1e86233d",
+            "text": "A semaphore is used primarily for:",
+            "options": [
+                "Memory allocation",
+                "Process synchronization",
+                "File management",
+                "CPU scheduling"
+            ],
+            "correct_answer": "Process synchronization",
+            "marks": 2
+        },
+        {
+            "q_id": "q_1d1a6af7-1bd8-4a1d-9191-0d21f00290b6",
+            "text": "Which of the following is NOT a type of Operating System?",
+            "options": [
+                "Batch OS",
+                "Real-time OS",
+                "Distributed OS",
+                "Relational OS"
+            ],
+            "correct_answer": "Relational OS",
+            "marks": 1
+        },
+        {
+            "q_id": "q_4f02ddb5-f4c4-4f5a-b911-1a67ef9a9e02",
+            "text": "The core component of the Operating System that manages system resources is the:",
+            "options": [
+                "Shell",
+                "Kernel",
+                "API",
+                "System Call Interface"
+            ],
+            "correct_answer": "Kernel",
+            "marks": 1
+        },
+        {
+            "q_id": "q_95982bdc-4b1c-495c-aa16-1039d9adaf96",
+            "text": "In paging memory management, the physical memory is divided into fixed-size blocks called:",
+            "options": [
+                "Segments",
+                "Pages",
+                "Blocks",
+                "Frames"
+            ],
+            "correct_answer": "Frames",
+            "marks": 1
+        }
+    ],
+    "CN": [
+        {
+            "q_id": "q_ad4300cc-92ae-4b03-b936-bd4009413a55",
+            "text": "What is the primary function of an Operating System?",
+            "options": [
+                "Manage computer hardware",
+                "Provide a user interface",
+                "Execute application programs",
+                "All of the above"
+            ],
+            "correct_answer": "All of the above",
+            "marks": 1
+        },
+        {
+            "q_id": "q_77f43237-440f-47b9-86b0-d943a6fbb12b",
+            "text": "Which scheduling algorithm aims to minimize the average waiting time?",
+            "options": [
+                "First-Come, First-Served (FCFS)",
+                "Shortest Job First (SJF)",
+                "Round Robin (RR)",
+                "Priority Scheduling"
+            ],
+            "correct_answer": "Shortest Job First (SJF)",
+            "marks": 2
+        },
+        {
+            "q_id": "q_da6b3218-6e4d-4926-a9e4-b6bc595120e9",
+            "text": "A process currently waiting for the CPU to become available is in which state?",
+            "options": [
+                "Running",
+                "Waiting",
+                "Ready",
+                "Terminated"
+            ],
+            "correct_answer": "Ready",
+            "marks": 1
+        },
+        {
+            "q_id": "q_4bdec694-e268-4741-843b-13cc9d59bf58",
+            "text": "The mechanism where the OS uses secondary storage to extend the available RAM is called:",
+            "options": [
+                "Caching",
+                "Spooling",
+                "Virtual Memory",
+                "Buffering"
+            ],
+            "correct_answer": "Virtual Memory",
+            "marks": 1
+        },
+        {
+            "q_id": "q_b0bfc35c-7c01-4584-baa9-8a90cceedb45",
+            "text": "A situation where two or more processes are waiting indefinitely for an event that can only be caused by one of the waiting processes is called:",
+            "options": [
+                "Starvation",
+                "Deadlock",
+                "Race Condition",
+                "Critical Section"
+            ],
+            "correct_answer": "Deadlock",
+            "marks": 2
+        },
+        {
+            "q_id": "q_a8a12b07-eeeb-4132-818f-2d40043f10b6",
+            "text": "What is \"Thrashing\" in the context of memory management?",
+            "options": [
+                "Excessive page swapping",
+                "Memory leak",
+                "Buffer overflow",
+                "Disk fragmentation"
+            ],
+            "correct_answer": "Excessive page swapping",
+            "marks": 1
+        },
+        {
+            "q_id": "q_a19a16e8-89ea-4d18-bfc8-31586f6c4be5",
+            "text": "A semaphore is used primarily for:",
+            "options": [
+                "Memory allocation",
+                "Process synchronization",
+                "File management",
+                "CPU scheduling"
+            ],
+            "correct_answer": "Process synchronization",
+            "marks": 2
+        },
+        {
+            "q_id": "q_a9be7d06-0036-4ce4-91f2-0a366dcbb77f",
+            "text": "Which of the following is NOT a type of Operating System?",
+            "options": [
+                "Batch OS",
+                "Real-time OS",
+                "Distributed OS",
+                "Relational OS"
+            ],
+            "correct_answer": "Relational OS",
+            "marks": 1
+        },
+        {
+            "q_id": "q_efb0b782-c61d-4c97-8198-7f40e4b276fd",
+            "text": "The core component of the Operating System that manages system resources is the:",
+            "options": [
+                "Shell",
+                "Kernel",
+                "API",
+                "System Call Interface"
+            ],
+            "correct_answer": "Kernel",
+            "marks": 1
+        },
+        {
+            "q_id": "q_0e118ee3-241d-43db-b1e1-e35b2a82d44e",
+            "text": "In paging memory management, the physical memory is divided into fixed-size blocks called:",
+            "options": [
+                "Segments",
+                "Pages",
+                "Blocks",
+                "Frames"
+            ],
+            "correct_answer": "Frames",
+            "marks": 1
+        }
+    ]
+}

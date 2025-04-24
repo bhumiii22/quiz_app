@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block title %}Teacher Dashboard{% endblock %}
+{% block content %}
+  <h2>Welcome, Teacher {{ session.user_email }}</h2>
+
+  <h3>Quiz Management</h3>
+  <ul>
+    <li><a href="{{ url_for('create_quiz_manual') }}">Create Quiz Manually</a></li>
+    <li><a href="{{ url_for('create_quiz_excel') }}">Create Quiz from Excel</a></li>
+    <li><a href="{{ url_for('create_quiz_smart') }}">Generate Smart Quiz</a></li>
+    <li><a href="{{ url_for('add_questions_manual_form') }}">Add Questions Manually</a></li>
+  </ul>
+
+  <hr>
+
+   <h3>View Performance Analysis</h3>
+   {% if all_quizzes %}
+     <form method="GET" action="{{ url_for('view_analysis') }}">
+        <label for="quiz_id_select">Select Quiz to Analyze:</label>
+        <select name="quiz_id" id="quiz_id_select" required>
+            <option value="">-- Select a Quiz --</option>
+            {% for quiz in all_quizzes %}
+                <option value="{{ quiz.quiz_id }}">{{ quiz.title }} ({{ quiz.subject_id }})</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Analyze</button>
+     </form>
+   {% else %}
+     <p>No quizzes created yet to analyze.</p>
+   {% endif %}
+
+   <hr>
+
+    <h3>Available Subjects & Questions</h3>
+    {% if subjects %}
+        <table>
+            <thead><tr><th>Subject ID</th><th>Question Count</th></tr></thead>
+            <tbody>
+                {% for subject, count in subjects.items() %}
+                <tr><td>{{ subject }}</td><td>{{ count }}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No subjects or questions found.</p>
+    {% endif %}
+
+{% endblock %}

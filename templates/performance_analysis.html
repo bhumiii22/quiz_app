@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block title %}Performance Analysis: {{ analysis.quiz_title }}{% endblock %}
+{% block content %}
+  <h2>Performance Analysis for: {{ analysis.quiz_title }}</h2>
+  <p>Subject: {{ analysis.subject_id }}</p>
+  <p>Quiz ID: {{ analysis.quiz_id }}</p>
+
+  {% if analysis.error_message %}
+    <p style="color: red;">Error: {{ analysis.error_message }}</p>
+  {% else %}
+    <h3>Summary Statistics</h3>
+    <ul>
+      <li>Number of Attempts: {{ analysis.num_attempts }}</li>
+      <li>Maximum Possible Score: {{ analysis.max_possible_score }}</li>
+      <li>Average Score: {{ analysis.average_score }} ({{ analysis.average_percentage }}%)</li>
+      <li>Highest Score: {{ analysis.highest_score }}</li>
+      <li>Lowest Score: {{ analysis.lowest_score }}</li>
+    </ul>
+
+    <h3>Performers</h3>
+    <div>
+      <h4>Top Performers (Max 5)</h4>
+      {% if analysis.top_performers %}
+      <ul>
+        {% for p in analysis.top_performers %}
+        <li>PRN: {{ p.student_prn }}, Score: {{ p.score }}</li>
+        {% endfor %}
+      </ul>
+      {% else %} <p>(Not enough data)</p> {% endif %}
+    </div>
+    <div>
+      <h4>Lowest Performers (Max 5)</h4>
+       {% if analysis.bottom_performers %}
+      <ul>
+        {% for p in analysis.bottom_performers %}
+        <li>PRN: {{ p.student_prn }}, Score: {{ p.score }}</li>
+        {% endfor %}
+      </ul>
+       {% else %} <p>(Not enough data)</p> {% endif %}
+    </div>
+
+     <h4>Students Who Completed</h4>
+       {% if analysis.completers %}
+         <p>{{ analysis.completers | join(', ') }}</p>
+       {% else %} <p>(No completers)</p> {% endif %}
+
+
+    <h3>Visualizations</h3>
+    {% if analysis.histogram_url %}
+      <h4>Score Distribution</h4>
+      <img src="{{ url_for('static', filename=analysis.histogram_url.replace('static/', '')) }}" alt="Score Distribution Histogram" style="max-width: 600px; height: auto;">
+       <p><a href="{{ url_for('static', filename=analysis.histogram_url.replace('static/', '')) }}" target="_blank">View full size</a></p>
+    {% else %}
+      <p>(Histogram could not be generated)</p>
+    {% endif %}
+
+  {% endif %}
+
+  <p><a href="{{ url_for('teacher_dashboard') }}">Back to Teacher Dashboard</a></p>
+{% endblock %}
