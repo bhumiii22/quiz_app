@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}500 - Server Error{% endblock %}
+{% block content %}
+<div class="error-container">
+    <div class="error-badge error-badge-danger">500 Server Error</div>
+    <h1 class="error-title">Something Went Wrong</h1>
+    <p class="error-description">
+        {{ error_message or "An unexpected internal server error occurred while processing your request. Please try again later or contact the administrator." }}
+    </p>
+    <div class="error-actions">
+        <a href="{{ url_for('index') }}" class="btn-primary">Return to Home</a>
+        <a href="javascript:location.reload()" class="btn-secondary">Reload Page</a>
+    </div>
+</div>
+{% endblock %}

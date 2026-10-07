@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.env
+uploads/*
+!uploads/.gitkeep
+static/plots/*.png
+data/*.lock
+.vscode/
+.idea/

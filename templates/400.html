@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}400 - Bad Request{% endblock %}
+{% block content %}
+<div class="error-container">
+    <div class="error-badge error-badge-warning">400 Bad Request</div>
+    <h1 class="error-title">Invalid Request</h1>
+    <p class="error-description">
+        {{ error_message or "The server could not understand the request due to invalid syntax, missing parameters, or corrupted data." }}
+    </p>
+    <div class="error-actions">
+        <a href="{{ url_for('index') }}" class="btn-primary">Return to Home</a>
+        <a href="javascript:history.back()" class="btn-secondary">Go Back</a>
+    </div>
+</div>
+{% endblock %}

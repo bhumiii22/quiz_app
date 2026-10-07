@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}413 - File Too Large{% endblock %}
+{% block content %}
+<div class="error-container">
+    <div class="error-badge error-badge-danger">413 File Exceeds Limit</div>
+    <h1 class="error-title">File Too Large</h1>
+    <p class="error-description">
+        The uploaded file exceeds the maximum allowed upload limit (16MB). Please upload a smaller Excel spreadsheet.
+    </p>
+    <div class="error-actions">
+        <a href="{{ url_for('create_quiz_excel') }}" class="btn-primary">Try Again</a>
+        <a href="{{ url_for('teacher_dashboard') }}" class="btn-secondary">Teacher Dashboard</a>
+    </div>
+</div>
+{% endblock %}

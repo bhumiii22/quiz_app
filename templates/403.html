@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}403 - Access Denied{% endblock %}
+{% block content %}
+<div class="error-container">
+    <div class="error-badge error-badge-warning">403 Access Denied</div>
+    <h1 class="error-title">Permission Required</h1>
+    <p class="error-description">
+        {{ error_message or "You do not have permission to view or modify this page. Please log in with the appropriate account role." }}
+    </p>
+    <div class="error-actions">
+        <a href="{{ url_for('index') }}" class="btn-primary">Go to Dashboard</a>
+        <a href="{{ url_for('login') }}" class="btn-secondary">Switch Account</a>
+    </div>
+</div>
+{% endblock %}
